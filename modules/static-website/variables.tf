@@ -40,3 +40,20 @@ variable "cors_origins" {
 variable "cors_max_age" {
   default = 1200
 }
+
+# Cloudfront
+
+variable "cloudfront_default_ttl" {
+  description = "Cloudfront's default time to live in seconds"
+  default     = 60
+}
+
+variable "cloudfront_min_ttl" {
+  description = "Cloudfront's min time to live in seconds"
+  default     = 0
+}
+
+variable "cloudfront_max_ttl" {
+  description = "Cloudfront's max time to live in seconds"
+  default     = 180
+}
