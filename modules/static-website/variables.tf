@@ -2,6 +2,19 @@ variable "domain_name" {
   description = "Domain name is also used to specify the names of relevant module-resources."
 }
 
+variable "zone_id" {
+  description = "Zone"
+}
+
+variable "alternative_domains" {
+  description = "Alternative domain names for certificate etc."
+  default     = []
+}
+
+variable "tags" {
+  description = "Tags to associate with resources"
+}
+
 # S3 variables
 variable "s3_index_file" {
   default = "index.html"
