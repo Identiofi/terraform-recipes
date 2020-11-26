@@ -44,7 +44,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
-  // Here's where our certificate is loaded in!
   viewer_certificate {
     acm_certificate_arn = aws_acm_certificate_validation.viewer_certificate.certificate_arn
     ssl_support_method  = "sni-only"
