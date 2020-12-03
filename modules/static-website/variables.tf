@@ -3,7 +3,7 @@ variable "domain_name" {
 }
 
 variable "zone_id" {
-  description = "Zone"
+  description = "Id for the hosted zone to build resources under."
 }
 
 variable "alternative_domains" {
@@ -12,7 +12,7 @@ variable "alternative_domains" {
 }
 
 variable "tags" {
-  description = "Tags to associate with resources"
+  description = "Tags to associate with resources."
 }
 
 # S3 variables
