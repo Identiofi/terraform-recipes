@@ -3,7 +3,7 @@ variable "domain_name" {
 }
 
 variable "zone_id" {
-  description = "Zone"
+  description = "Id for the hosted zone to build resources under."
 }
 
 variable "alternative_domains" {
@@ -12,7 +12,7 @@ variable "alternative_domains" {
 }
 
 variable "tags" {
-  description = "Tags to associate with resources"
+  description = "Tags to associate with resources."
 }
 
 # S3 variables
@@ -56,4 +56,17 @@ variable "cloudfront_min_ttl" {
 variable "cloudfront_max_ttl" {
   description = "Cloudfront's max time to live in seconds"
   default     = 180
+}
+
+variable "credentials_file" {
+  description = "AWS shared credentials path"
+}
+
+variable "credentials_profile" {
+  description = "AWS credentials profile, if multiple"
+}
+
+variable "cached_methods" {
+  description = "Methods cached by cloudfront"
+  default     = ["GET", "HEAD"]
 }

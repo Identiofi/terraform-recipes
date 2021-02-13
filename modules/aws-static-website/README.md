@@ -4,9 +4,9 @@ Useful for hosting your Create React Application. Setting up an image bank for s
 
 ## Components
 
-The tech stack here is pretty simple, `s3` for storage, `acm` for the certificate, `Route53` for that domain configuration and `Cloudfront` for caching doing what it does best. Also gets us the added benefit of https.
+The tech stack here is pretty simple, `s3` for storage, `acm` for the certificate, `route53` for that domain configuration and `Cloudfront` for caching doing what it does best. Also gets us the added benefit of https.
 
-- Cloudfront
+- CloudFront
 - S3
 - Route53
 - Acm
