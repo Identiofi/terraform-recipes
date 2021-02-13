@@ -57,3 +57,16 @@ variable "cloudfront_max_ttl" {
   description = "Cloudfront's max time to live in seconds"
   default     = 180
 }
+
+variable "credentials_file" {
+  description = "AWS shared credentials path"
+}
+
+variable "credentials_profile" {
+  description = "AWS credentials profile, if multiple"
+}
+
+variable "cached_methods" {
+  description = "Methods cached by cloudfront"
+  default = ["GET", "HEAD"]
+}

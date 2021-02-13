@@ -10,7 +10,7 @@ terraform {
 # Our default AWS provider is set up just next door of Finland in Stockholm
 provider "aws" {
   region                  = "eu-north-1"
-  shared_credentials_file = var.credentials_file
+  shared_credentials_file = var.aws_credentials_file
   profile                 = var.aws_profile_name
 }
 
@@ -18,7 +18,7 @@ provider "aws" {
 # only available in the US.
 provider "aws" {
   region                  = "us-east-1"
-  shared_credentials_file = var.credentials_file
+  shared_credentials_file = var.aws_credentials_file
   profile                 = var.aws_profile
   alias                   = "us"
 }

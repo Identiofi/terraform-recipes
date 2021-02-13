@@ -1,6 +1,6 @@
 variable "aws_profile_name" {
   description = "AWS profile name used to identify used credentials"
-  default     = "identio_development"
+  default     = "personal"
 }
 
 variable "aws_credentials_file" {

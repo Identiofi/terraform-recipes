@@ -36,6 +36,16 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
+  # You may wish to uncomment this block to fix redirections
+  # in case you're working on a spa-application where
+  # routing is handled by JavaScript
+  # custom_error_response {
+  #   error_caching_min_ttl = 60
+  #   error_code            = 404
+  #   response_code         = 200
+  #   response_page_path    = "/index.html"
+  # }
+
   aliases = concat([var.domain_name], var.alternative_domains)
 
   restrictions {
