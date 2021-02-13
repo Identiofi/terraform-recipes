@@ -68,5 +68,5 @@ variable "credentials_profile" {
 
 variable "cached_methods" {
   description = "Methods cached by cloudfront"
-  default = ["GET", "HEAD"]
+  default     = ["GET", "HEAD"]
 }
