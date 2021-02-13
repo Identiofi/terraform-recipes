@@ -1,10 +1,14 @@
+locals {
+  website_domain = "terraform-recipes.pulma.dev"
+}
+
 data "aws_route53_zone" "pulma_dev" {
   name = "pulma.dev"
 }
 
 module "example-website" {
   source      = "./modules/aws-static-website"
-  domain_name = "terraform-recipes.pulma.dev"
+  domain_name = local.website_domain
   zone_id     = data.aws_route53_zone.pulma_dev.zone_id
   tags = {
     project = "terraform-recipes"
